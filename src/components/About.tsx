@@ -21,6 +21,7 @@ const About = () => {
 
       <div className="relative aspect-square">
         <Image
+          unoptimized
           fill
           sizes="(max-width: 640px) 50vw, 75vw"
           src={'/static/icon.png'}

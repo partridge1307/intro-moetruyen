@@ -11,7 +11,13 @@ const Donate = () => {
     >
       <p className="text-2xl mb-2">Donate</p>
 
-      <Image width={294} height={294} src="/static/QR_CODE.png" alt="QR Code" />
+      <Image
+        unoptimized
+        width={294}
+        height={294}
+        src="/static/QR_CODE.png"
+        alt="QR Code"
+      />
 
       <p>TP Bank | 03566651501 | PHAN THE HIEN</p>
     </ParallaxLayer>

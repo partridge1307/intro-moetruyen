@@ -27,6 +27,7 @@ const Social = () => {
 
         <div className="relative aspect-square w-5/6">
           <Image
+            unoptimized
             fill
             sizes="(max-width: 640px) 50vw, 70vw"
             src="/static/fb.jpg"
@@ -39,6 +40,7 @@ const Social = () => {
       <div className="relative flex gap-10 justify-between min-h-0">
         <div className="relative w-5/6" style={{ aspectRatio: 4 / 3 }}>
           <Image
+            unoptimized
             fill
             sizes="(max-width: 640px) 50vw, 70vw"
             src="/static/disc.jpg"
