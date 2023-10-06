@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     locale: 'vi',
     countryName: 'VN',
     images: {
-      url: '/icon.png',
+      url: '/static/icon.png',
       alt: 'Moetruyen Icon',
     },
   },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     creator: 'Partridge',
     card: 'summary',
     images: {
-      url: '/icon.png',
+      url: '/static/icon.png',
       alt: 'Moetruyen Icon',
     },
   },
