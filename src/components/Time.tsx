@@ -1,15 +1,17 @@
 'use client';
 
-import { ParallaxLayer } from '@react-spring/parallax';
+import { IParallax, ParallaxLayer } from '@react-spring/parallax';
 import Countdown from 'react-countdown';
 import ShareButton from './ShareButton';
+import type { RefObject } from 'react';
 
-const Time = () => {
+const Time = ({ ref }: { ref: RefObject<IParallax> }) => {
   return (
     <ParallaxLayer
       offset={4}
       speed={0.5}
       className="flex flex-col justify-center items-center gap-10 bg-white"
+      onClick={() => ref.current?.scrollTo(5)}
     >
       <Countdown
         date={new Date('October 20, 2023 12:00:00')}

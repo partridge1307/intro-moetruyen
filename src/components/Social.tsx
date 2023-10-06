@@ -1,15 +1,17 @@
 'use client';
 
-import { ParallaxLayer } from '@react-spring/parallax';
+import { IParallax, ParallaxLayer } from '@react-spring/parallax';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import type { RefObject } from 'react';
 
-const Social = () => {
+const Social = ({ ref }: { ref: RefObject<IParallax> }) => {
   return (
     <ParallaxLayer
       offset={3}
       speed={0.3}
       className="container p-6 flex flex-col justify-between gap-14 bg-blue-100"
+      onClick={() => ref.current?.scrollTo(4)}
     >
       <h1 className="text-3xl font-medium">Cộng đồng</h1>
 

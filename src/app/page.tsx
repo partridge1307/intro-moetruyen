@@ -7,18 +7,19 @@ import Homepage from '@/components/Homepage';
 import Loading from '@/components/Loading';
 import Social from '@/components/Social';
 import Time from '@/components/Time';
-import { Parallax } from '@react-spring/parallax';
-import { useState } from 'react';
+import { type IParallax, Parallax } from '@react-spring/parallax';
+import { useRef, useState } from 'react';
 
 const Page = () => {
   const [isMounted, setMonted] = useState(false);
+  const ref = useRef<IParallax>(null);
 
   return (
     <main>
       <Loading isMounted={isMounted} setMonted={setMonted} />
 
       {isMounted && (
-        <Parallax pages={6}>
+        <Parallax pages={6} ref={ref}>
           <div
             className="absolute inset-0"
             style={{
@@ -28,11 +29,11 @@ const Page = () => {
             }}
           />
 
-          <Homepage />
-          <About />
-          <Features />
-          <Social />
-          <Time />
+          <Homepage ref={ref} />
+          <About ref={ref} />
+          <Features ref={ref} />
+          <Social ref={ref} />
+          <Time ref={ref} />
           <Donate />
         </Parallax>
       )}

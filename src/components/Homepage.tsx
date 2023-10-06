@@ -1,13 +1,19 @@
 'use client';
 
-import { ParallaxLayer } from '@react-spring/parallax';
+import { type IParallax, ParallaxLayer } from '@react-spring/parallax';
 import { TypeAnimation } from 'react-type-animation';
 import style from '@/styles/homepage.module.css';
 import { MoveDown } from 'lucide-react';
+import type { RefObject } from 'react';
 
-const Homepage = () => {
+const Homepage = ({ ref }: { ref: RefObject<IParallax> }) => {
   return (
-    <ParallaxLayer offset={0} speed={1} className={style.text}>
+    <ParallaxLayer
+      offset={0}
+      speed={1}
+      className={style.text}
+      onClick={() => ref.current?.scrollTo(1)}
+    >
       <div />
 
       <div className="text-center">

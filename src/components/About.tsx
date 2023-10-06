@@ -1,14 +1,16 @@
 'use client';
 
-import { ParallaxLayer } from '@react-spring/parallax';
+import { type IParallax, ParallaxLayer } from '@react-spring/parallax';
 import Image from 'next/image';
+import type { RefObject } from 'react';
 
-const About = () => {
+const About = ({ ref }: { ref: RefObject<IParallax> }) => {
   return (
     <ParallaxLayer
       offset={1}
       speed={0.2}
       className="container p-6 flex gap-6 lg:gap-10 bg-blue-100"
+      onClick={() => ref.current?.scrollTo(2)}
     >
       <div className="space-y-1">
         <h1 className="text-3xl font-medium">Giới thiệu</h1>

@@ -1,17 +1,20 @@
 'use client';
 
-import { ParallaxLayer } from '@react-spring/parallax';
-import { FC } from 'react';
+import { IParallax, ParallaxLayer } from '@react-spring/parallax';
+import type { FC, RefObject } from 'react';
 import style from '@/styles/feature.module.css';
 
-interface FeaturesProps {}
+interface FeaturesProps {
+  ref: RefObject<IParallax>;
+}
 
-const Features: FC<FeaturesProps> = ({}) => {
+const Features: FC<FeaturesProps> = ({ ref }) => {
   return (
     <ParallaxLayer
       offset={2}
       speed={0.4}
       className="container p-6 flex flex-col justify-between bg-blue-100"
+      onClick={() => ref.current?.scrollTo(3)}
     >
       <div className="flex justify-between">
         <div />
