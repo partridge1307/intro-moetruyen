@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@keyframes move-waves {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+.wave-box {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: -webkit-transform 2.5s cubic-bezier(0.03, 0.1, 0.25, 1.02);
+  transition: -webkit-transform 2.5s cubic-bezier(0.03, 0.1, 0.25, 1.02);
+  transition: transform 2.5s cubic-bezier(0.03, 0.1, 0.25, 1.02);
+  transition: transform 2.5s cubic-bezier(0.03, 0.1, 0.25, 1.02),
+    -webkit-transform 2.5s cubic-bezier(0.03, 0.1, 0.25, 1.02);
+}
+
+.wave-box.run {
+  -webkit-transform: translateY(110%);
+  transform: translateY(110%);
+}
+
+.wave-box .waves {
+  position: absolute;
+  top: -10vh;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  margin-bottom: -7px; /* Fix for safari gap */
+}
+
+.wave-box .parallax > use {
+  -webkit-animation: move-waves 30s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  animation: move-waves 30s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.wave-box .parallax > use:nth-child(1) {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+.wave-box .parallax > use:nth-child(2) {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+  -webkit-animation-duration: 5.5s;
+  animation-duration: 5.5s;
+}
+
+.wave-box .parallax > use:nth-child(3) {
+  -webkit-animation-delay: -4s;
+  animation-delay: -4s;
+  -webkit-animation-duration: 13s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  -webkit-animation-delay: -5s;
+  animation-delay: -5s;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+}

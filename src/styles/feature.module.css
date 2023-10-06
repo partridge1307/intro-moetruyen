@@ -1,0 +1,10 @@
+.stroke {
+  position: relative;
+  -webkit-text-stroke: 2px black;
+}
+.stroke span {
+  position: absolute;
+  left: 0;
+  -webkit-text-stroke: 0;
+  pointer-events: none;
+}
