@@ -23,7 +23,7 @@ const About = () => {
         <Image
           fill
           sizes="(max-width: 640px) 50vw, 75vw"
-          src={'/icon.png'}
+          src={'/static/icon.png'}
           alt="Moetruyen Icon"
           className="rounded-md"
         />

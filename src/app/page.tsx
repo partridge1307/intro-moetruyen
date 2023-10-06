@@ -22,7 +22,7 @@ const Page = () => {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: 'url("/blue.svg")',
+              backgroundImage: 'url("/static/blue.svg")',
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
             }}

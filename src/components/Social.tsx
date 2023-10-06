@@ -29,7 +29,7 @@ const Social = () => {
           <Image
             fill
             sizes="(max-width: 640px) 50vw, 70vw"
-            src="/fb.jpg"
+            src="/static/fb.jpg"
             alt="Facebook Image"
             className="object-contain object-right bg-gradient-to-l from-white"
           />
@@ -41,7 +41,7 @@ const Social = () => {
           <Image
             fill
             sizes="(max-width: 640px) 50vw, 70vw"
-            src="/disc.jpg"
+            src="/static/disc.jpg"
             alt="Discord Image"
             className="object-contain rounded-md object-left bg-gradient-to-r from-white"
           />
