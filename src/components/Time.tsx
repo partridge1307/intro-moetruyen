@@ -14,7 +14,7 @@ const Time = ({ ref }: { ref: RefObject<IParallax> }) => {
       onClick={() => ref.current?.scrollTo(5)}
     >
       <Countdown
-        date={new Date('October 20, 2023 12:00:00')}
+        date={new Date('October 22, 2023 12:00:00')}
         precision={3}
         renderer={({ days, hours, minutes, seconds }) => (
           <p className="text-4xl text-center">
